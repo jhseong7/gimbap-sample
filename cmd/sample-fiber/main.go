@@ -2,13 +2,13 @@ package main
 
 import (
 	"github.com/gofiber/fiber/v2"
+	"github.com/jhseong7/gimbap"
 	sample "github.com/jhseong7/gimbap-sample/http-engine"
-	"github.com/jhseong7/gimbap/core"
 	"github.com/jhseong7/gimbap/engine"
 )
 
 func main() {
-	app := core.CreateApp(core.AppOption{
+	app := gimbap.CreateApp(gimbap.AppOption{
 		AppName:   "SampleAppFiber",
 		AppModule: sample.AppModuleFiber,
 		HttpEngine: engine.NewFiberHttpEngine(engine.FiberHttpEngineOption{

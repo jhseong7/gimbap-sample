@@ -2,12 +2,12 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/jhseong7/gimbap"
 	sample "github.com/jhseong7/gimbap-sample/http-engine"
-	"github.com/jhseong7/gimbap/core"
 )
 
 func main() {
-	app := core.CreateApp(core.AppOption{
+	app := gimbap.CreateApp(gimbap.AppOption{
 		AppName:   "SampleAppGin",
 		AppModule: sample.AppModuleGin,
 	})

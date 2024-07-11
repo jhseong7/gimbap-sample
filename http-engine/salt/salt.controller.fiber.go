@@ -4,18 +4,18 @@ import (
 	"fmt"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/jhseong7/gimbap/controller"
+	"github.com/jhseong7/gimbap"
 )
 
 type (
 	SaltControllerFiber struct {
-		controller.IController
+		gimbap.IController
 		saltSvc SaltService
 	}
 )
 
-func (c *SaltControllerFiber) GetRouteSpecs() []controller.RouteSpec {
-	return []controller.RouteSpec{
+func (c *SaltControllerFiber) GetRouteSpecs() []gimbap.RouteSpec {
+	return []gimbap.RouteSpec{
 		{Method: "GET", Path: "/salt", Handler: c.GetSaltFiber},
 		{Method: "GET", Path: "/salt/:id", Handler: c.GetSaltFiber},
 		{Method: "POST", Path: "/salt", Handler: c.PostSaltFiber},
@@ -46,8 +46,8 @@ func NewSaltControllerFiber(saltSvc *SaltService) *SaltControllerFiber {
 	}
 }
 
-var SaltControllerFiberProvider = controller.DefineController(
-	controller.ControllerOption{
+var SaltControllerFiberProvider = gimbap.DefineController(
+	gimbap.ControllerOption{
 		Name:         "SaltControllerFiber",
 		Instantiator: NewSaltControllerFiber,
 		RootPath:     "salt",

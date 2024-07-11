@@ -3,19 +3,20 @@ package food
 import (
 	"fmt"
 
+	"github.com/jhseong7/gimbap"
 	"github.com/jhseong7/gimbap/controller"
 	"github.com/labstack/echo/v4"
 )
 
 type (
 	FoodControllerEcho struct {
-		controller.IController
+		gimbap.IController
 		Food FoodService
 	}
 )
 
-func (c *FoodControllerEcho) GetRouteSpecs() []controller.RouteSpec {
-	return []controller.RouteSpec{
+func (c *FoodControllerEcho) GetRouteSpecs() []gimbap.RouteSpec {
+	return []gimbap.RouteSpec{
 		{Method: "GET", Path: "/", Handler: c.GetFoodEcho},
 		{Method: "POST", Path: "/", Handler: c.PostFoodEcho},
 	}
@@ -39,7 +40,7 @@ func NewFoodControllerEcho(food *FoodService) *FoodControllerEcho {
 	}
 }
 
-var FoodControllerEchoProvider = controller.DefineController(controller.ControllerOption{
+var FoodControllerEchoProvider = controller.DefineController(gimbap.ControllerOption{
 	Name:         "FoodControllerEcho",
 	Instantiator: NewFoodControllerEcho,
 	RootPath:     "food",

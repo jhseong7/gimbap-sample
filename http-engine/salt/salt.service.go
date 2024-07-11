@@ -1,8 +1,6 @@
 package salt
 
-import (
-	"github.com/jhseong7/gimbap/provider"
-)
+import "github.com/jhseong7/gimbap"
 
 type (
 	SaltService struct {
@@ -20,7 +18,7 @@ func NewSalt() *SaltService {
 	}
 }
 
-var SaltProvider = provider.DefineProvider(provider.ProviderOption{
+var SaltProvider = gimbap.DefineProvider(gimbap.ProviderOption{
 	Name:         "SaltService",
 	Instantiator: NewSalt,
 })

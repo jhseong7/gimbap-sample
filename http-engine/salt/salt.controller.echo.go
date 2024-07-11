@@ -3,19 +3,19 @@ package salt
 import (
 	"fmt"
 
-	"github.com/jhseong7/gimbap/controller"
+	"github.com/jhseong7/gimbap"
 	"github.com/labstack/echo/v4"
 )
 
 type (
 	SaltControllerEcho struct {
-		controller.IController
+		gimbap.IController
 		saltSvc SaltService
 	}
 )
 
-func (c *SaltControllerEcho) GetRouteSpecs() []controller.RouteSpec {
-	return []controller.RouteSpec{
+func (c *SaltControllerEcho) GetRouteSpecs() []gimbap.RouteSpec {
+	return []gimbap.RouteSpec{
 		{Method: "GET", Path: "/salt", Handler: c.GetSaltEcho},
 		{Method: "GET", Path: "/salt/:id", Handler: c.GetSaltEcho},
 		{Method: "POST", Path: "/salt", Handler: c.PostSaltEcho},
@@ -46,8 +46,8 @@ func NewSaltControllerEcho(saltSvc *SaltService) *SaltControllerEcho {
 	}
 }
 
-var SaltControllerEchoProvider = controller.DefineController(
-	controller.ControllerOption{
+var SaltControllerEchoProvider = gimbap.DefineController(
+	gimbap.ControllerOption{
 		Name:         "SaltControllerEcho",
 		Instantiator: NewSaltControllerEcho,
 		RootPath:     "salt",
