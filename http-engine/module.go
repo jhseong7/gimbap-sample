@@ -1,30 +1,31 @@
 package sample
 
 import (
-	"github.com/jhseong7/gimbap/core"
-	"github.com/jhseong7/gimbap/sample/http-engine/food"
-	"github.com/jhseong7/gimbap/sample/http-engine/salt"
+	"github.com/jhseong7/gimbap"
+	"github.com/jhseong7/gimbap-sample/http-engine/food"
+	"github.com/jhseong7/gimbap-sample/http-engine/salt"
+	"github.com/jhseong7/gimbap/module"
 )
 
-var AppModuleGin = core.DefineModule(core.ModuleOption{
+var AppModuleGin = module.DefineModule(gimbap.ModuleOption{
 	Name: "AppModuleGin",
-	SubModules: []core.Module{
+	SubModules: []gimbap.Module{
 		*salt.SaltModuleGin,
 		*food.FoodModuleGin,
 	},
 })
 
-var AppModuleEcho = core.DefineModule(core.ModuleOption{
+var AppModuleEcho = module.DefineModule(gimbap.ModuleOption{
 	Name: "AppModuleEcho",
-	SubModules: []core.Module{
+	SubModules: []module.Module{
 		*salt.SaltModuleEcho,
 		*food.FoodModuleEcho,
 	},
 })
 
-var AppModuleFiber = core.DefineModule(core.ModuleOption{
+var AppModuleFiber = module.DefineModule(gimbap.ModuleOption{
 	Name: "AppModuleFiber",
-	SubModules: []core.Module{
+	SubModules: []module.Module{
 		*salt.SaltModuleFiber,
 		*food.FoodModuleFiber,
 	},

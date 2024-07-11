@@ -1,17 +1,15 @@
 package salt
 
 import (
-	"github.com/jhseong7/gimbap/controller"
-	"github.com/jhseong7/gimbap/core"
-	"github.com/jhseong7/gimbap/provider"
+	"github.com/jhseong7/gimbap"
 )
 
-var SaltModuleFiber = core.DefineModule(core.ModuleOption{
+var SaltModuleFiber = gimbap.DefineModule(gimbap.ModuleOption{
 	Name: "SaltModule",
-	Providers: []provider.ProviderDefinition{
+	Providers: []gimbap.ProviderDefinition{
 		*SaltProvider,
 	},
-	Controllers: []controller.ControllerDefinition{
+	Controllers: []gimbap.ControllerDefinition{
 		*SaltControllerFiberProvider,
 	},
 })

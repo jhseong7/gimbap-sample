@@ -1,17 +1,13 @@
 package food
 
-import (
-	"github.com/jhseong7/gimbap/controller"
-	"github.com/jhseong7/gimbap/core"
-	"github.com/jhseong7/gimbap/provider"
-)
+import "github.com/jhseong7/gimbap"
 
-var FoodModuleGin = core.DefineModule(core.ModuleOption{
+var FoodModuleGin = gimbap.DefineModule(gimbap.ModuleOption{
 	Name: "FoodModuleGin",
-	Providers: []provider.ProviderDefinition{
+	Providers: []gimbap.ProviderDefinition{
 		*FoodProvider,
 	},
-	Controllers: []controller.ControllerDefinition{
+	Controllers: []gimbap.ControllerDefinition{
 		*FoodControllerGinProvider,
 	},
 })

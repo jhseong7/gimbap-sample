@@ -5,8 +5,8 @@ import (
 	"math"
 	"math/rand"
 
-	"github.com/jhseong7/gimbap/provider"
-	"github.com/jhseong7/gimbap/sample/http-engine/salt"
+	"github.com/jhseong7/gimbap"
+	"github.com/jhseong7/gimbap-sample/http-engine/salt"
 )
 
 type (
@@ -29,7 +29,7 @@ func NewFood(salt *salt.SaltService) *FoodService {
 	}
 }
 
-var FoodProvider = provider.DefineProvider(provider.ProviderOption{
+var FoodProvider = gimbap.DefineProvider(gimbap.ProviderOption{
 	Name:         "FoodService",
 	Instantiator: NewFood,
 })

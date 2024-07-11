@@ -1,14 +1,14 @@
 package main
 
 import (
+	"github.com/jhseong7/gimbap"
 	sample "github.com/jhseong7/gimbap-sample/http-engine"
-	"github.com/jhseong7/gimbap/core"
 	"github.com/jhseong7/gimbap/engine"
 	"github.com/labstack/echo/v4"
 )
 
 func main() {
-	app := core.CreateApp(core.AppOption{
+	app := gimbap.CreateApp(gimbap.AppOption{
 		AppName:    "SampleAppEcho",
 		AppModule:  sample.AppModuleEcho,
 		HttpEngine: engine.NewEchoHttpEngine(),

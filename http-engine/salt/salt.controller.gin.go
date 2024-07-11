@@ -4,18 +4,18 @@ import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jhseong7/gimbap/controller"
+	"github.com/jhseong7/gimbap"
 )
 
 type (
 	SaltControllerGin struct {
-		controller.IController
+		gimbap.IController
 		saltSvc SaltService
 	}
 )
 
-func (c *SaltControllerGin) GetRouteSpecs() []controller.RouteSpec {
-	return []controller.RouteSpec{
+func (c *SaltControllerGin) GetRouteSpecs() []gimbap.RouteSpec {
+	return []gimbap.RouteSpec{
 		{Method: "GET", Path: "/salt", Handler: c.GetSalt},
 		{Method: "GET", Path: "/salt/:id", Handler: c.GetSalt},
 		{Method: "POST", Path: "/salt", Handler: c.PostSalt},
@@ -42,8 +42,8 @@ func NewSaltControllerGin(saltSvc *SaltService) *SaltControllerGin {
 	}
 }
 
-var SaltControllerGinProvider = controller.DefineController(
-	controller.ControllerOption{
+var SaltControllerGinProvider = gimbap.DefineController(
+	gimbap.ControllerOption{
 		Name:         "SaltControllerGin",
 		Instantiator: NewSaltControllerGin,
 		RootPath:     "salt",

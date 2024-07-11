@@ -4,18 +4,18 @@ import (
 	"fmt"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/jhseong7/gimbap/controller"
+	"github.com/jhseong7/gimbap"
 )
 
 type (
 	FoodControllerFiber struct {
-		controller.IController
+		gimbap.IController
 		Food FoodService
 	}
 )
 
-func (c *FoodControllerFiber) GetRouteSpecs() []controller.RouteSpec {
-	return []controller.RouteSpec{
+func (c *FoodControllerFiber) GetRouteSpecs() []gimbap.RouteSpec {
+	return []gimbap.RouteSpec{
 		{Method: "GET", Path: "/", Handler: c.GetFood},
 		{Method: "POST", Path: "/", Handler: c.PostFood},
 	}
@@ -39,7 +39,7 @@ func NewFoodControllerFiber(food *FoodService) *FoodControllerFiber {
 	}
 }
 
-var FoodControllerFiberProvider = controller.DefineController(controller.ControllerOption{
+var FoodControllerFiberProvider = gimbap.DefineController(gimbap.ControllerOption{
 	Name:         "FoodControllerFiber",
 	Instantiator: NewFoodControllerFiber,
 	RootPath:     "food",

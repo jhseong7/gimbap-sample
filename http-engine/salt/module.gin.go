@@ -1,17 +1,13 @@
 package salt
 
-import (
-	"github.com/jhseong7/gimbap/controller"
-	"github.com/jhseong7/gimbap/core"
-	"github.com/jhseong7/gimbap/provider"
-)
+import "github.com/jhseong7/gimbap"
 
-var SaltModuleGin = core.DefineModule(core.ModuleOption{
+var SaltModuleGin = gimbap.DefineModule(gimbap.ModuleOption{
 	Name: "SaltModule",
-	Providers: []provider.ProviderDefinition{
+	Providers: []gimbap.ProviderDefinition{
 		*SaltProvider,
 	},
-	Controllers: []controller.ControllerDefinition{
+	Controllers: []gimbap.ControllerDefinition{
 		*SaltControllerGinProvider,
 	},
 })
