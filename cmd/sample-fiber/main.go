@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/jhseong7/gimbap"
-	sample "github.com/jhseong7/gimbap-sample/http-engine"
+	sample "github.com/jhseong7/gimbap-sample/server-engine"
 	"github.com/jhseong7/gimbap/engine"
 )
 
@@ -11,7 +11,7 @@ func main() {
 	app := gimbap.CreateApp(gimbap.AppOption{
 		AppName:   "SampleAppFiber",
 		AppModule: sample.AppModuleFiber,
-		HttpEngine: engine.NewFiberHttpEngine(engine.FiberHttpEngineOption{
+		ServerEngine: engine.NewFiberHttpEngine(engine.FiberHttpEngineOption{
 			FiberConfig: fiber.Config{
 				AppName: "SampleAppFiber",
 			},

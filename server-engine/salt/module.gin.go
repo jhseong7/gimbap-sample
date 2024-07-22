@@ -4,10 +4,10 @@ import "github.com/jhseong7/gimbap"
 
 var SaltModuleGin = gimbap.DefineModule(gimbap.ModuleOption{
 	Name: "SaltModule",
-	Providers: []gimbap.ProviderDefinition{
-		*SaltProvider,
+	Providers: []*gimbap.Provider{
+		SaltProvider,
 	},
-	Controllers: []gimbap.ControllerDefinition{
-		*SaltControllerGinProvider,
+	Controllers: []*gimbap.Controller{
+		SaltControllerGinProvider,
 	},
 })

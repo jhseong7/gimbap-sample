@@ -7,7 +7,7 @@ import (
 
 var DbConnectionModule = gimbap.DefineModule(gimbap.ModuleOption{
 	Name: "DbConnection",
-	Providers: []gimbap.ProviderDefinition{
-		*db.GormProvider,
+	Providers: []*gimbap.Provider{
+		db.GormProvider,
 	},
 })

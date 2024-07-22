@@ -6,7 +6,7 @@ import (
 	"math/rand"
 
 	"github.com/jhseong7/gimbap"
-	"github.com/jhseong7/gimbap-sample/http-engine/salt"
+	"github.com/jhseong7/gimbap-sample/server-engine/salt"
 )
 
 type (

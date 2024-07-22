@@ -6,10 +6,10 @@ import (
 
 var SaltModuleFiber = gimbap.DefineModule(gimbap.ModuleOption{
 	Name: "SaltModule",
-	Providers: []gimbap.ProviderDefinition{
-		*SaltProvider,
+	Providers: []*gimbap.Provider{
+		SaltProvider,
 	},
-	Controllers: []gimbap.ControllerDefinition{
-		*SaltControllerFiberProvider,
+	Controllers: []*gimbap.Controller{
+		SaltControllerFiberProvider,
 	},
 })

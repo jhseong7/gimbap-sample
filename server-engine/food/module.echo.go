@@ -4,10 +4,10 @@ import "github.com/jhseong7/gimbap"
 
 var FoodModuleEcho = gimbap.DefineModule(gimbap.ModuleOption{
 	Name: "FoodModuleEcho",
-	Providers: []gimbap.ProviderDefinition{
-		*FoodProvider,
+	Providers: []*gimbap.Provider{
+		FoodProvider,
 	},
-	Controllers: []gimbap.ControllerDefinition{
-		*FoodControllerEchoProvider,
+	Controllers: []*gimbap.Controller{
+		FoodControllerEchoProvider,
 	},
 })

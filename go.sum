@@ -58,6 +58,8 @@ github.com/jackc/puddle/v2 v2.2.1 h1:RhxXJtFG022u4ibrCSMSiu5aOq1i77R3OHKNJj77OAk
 github.com/jackc/puddle/v2 v2.2.1/go.mod h1:vriiEXHvEE654aYKXXjOvZM39qJ0q+azkZFrfEOc3H4=
 github.com/jhseong7/ecl v0.0.2 h1:gzsGwtSXAXGiUvFsyxw8ZcIrPZV5V2+gyiB1IYshVAg=
 github.com/jhseong7/ecl v0.0.2/go.mod h1:hJ8SeiRaHJ4UURfrNNMVkk6zjxIx7Pl3IZwuM6ajzII=
+github.com/jhseong7/ecl v0.0.3 h1:OIh6EyxgauZuMHVenPsW2fKvE9goVF1A23StukOPYK0=
+github.com/jhseong7/ecl v0.0.3/go.mod h1:hJ8SeiRaHJ4UURfrNNMVkk6zjxIx7Pl3IZwuM6ajzII=
 github.com/jhseong7/gimbap v0.0.1 h1:Sy51eWBdkk2ByDI3XFZoITA2B9lHjK+N7S6BXgTW/jQ=
 github.com/jhseong7/gimbap v0.0.1/go.mod h1:h2EfgPgfGiyJWZuBgUIn6GgF4aaJYkQEI6Fb90yCCbU=
 github.com/jhseong7/gimbap v0.0.2-minor h1:AZlR/mM5GdlzKaTG2PGmK3lqBpM+OQ1nTlZSNM9HY38=
@@ -68,6 +70,10 @@ github.com/jhseong7/gimbap v0.0.2-patch3 h1:mFau8Lg5Yz9TeY6PfTLC3PqINr4YFvp67+bC
 github.com/jhseong7/gimbap v0.0.2-patch3/go.mod h1:h2EfgPgfGiyJWZuBgUIn6GgF4aaJYkQEI6Fb90yCCbU=
 github.com/jhseong7/gimbap v0.0.2 h1:CUy9p08mIPyCYlF5dq5liUvGlR1o8TYgQ54wqCBbajk=
 github.com/jhseong7/gimbap v0.0.2/go.mod h1:h2EfgPgfGiyJWZuBgUIn6GgF4aaJYkQEI6Fb90yCCbU=
+github.com/jhseong7/gimbap v0.0.3 h1:YTpHhbnOYZNqgY4+FFhpEbotAJD5/8l7ohKENCuCZCs=
+github.com/jhseong7/gimbap v0.0.3/go.mod h1:h2EfgPgfGiyJWZuBgUIn6GgF4aaJYkQEI6Fb90yCCbU=
+github.com/jhseong7/gimbap v0.0.4 h1:BI7cMjybBLTJOwZPL/+iCK8l/ZKOgu7BH40aFo7BSrQ=
+github.com/jhseong7/gimbap v0.0.4/go.mod h1:zR2mY7ls0ZuVHTtXIzJQjiQ8U0lBUe3VIEhXcNrHGqI=
 github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=
 github.com/jinzhu/inflection v1.0.0/go.mod h1:h+uFLlag+Qp1Va5pdKtLDYj+kHp5pxUVkryuEj+Srlc=
 github.com/jinzhu/now v1.1.5 h1:/o9tlHleP7gOFmsnYNz3RGnqzefHA47wQpKrrdTIwXQ=
