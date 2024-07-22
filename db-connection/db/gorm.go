@@ -2,7 +2,7 @@ package db
 
 import (
 	logger "github.com/jhseong7/ecl"
-	"github.com/jhseong7/gimbap/provider"
+	"github.com/jhseong7/gimbap"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"
@@ -69,7 +69,7 @@ func NewGormClient(option DbClientOption) (db *gorm.DB) {
 	return
 }
 
-var GormProvider = provider.DefineProvider(provider.ProviderOption{
+var GormProvider = gimbap.DefineProvider(gimbap.ProviderOption{
 	Name:         "GormProvider",
 	Instantiator: NewGormClient,
 })
