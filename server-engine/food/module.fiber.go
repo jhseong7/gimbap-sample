@@ -4,10 +4,10 @@ import "github.com/jhseong7/gimbap"
 
 var FoodModuleFiber = gimbap.DefineModule(gimbap.ModuleOption{
 	Name: "FoodModuleFiber",
-	Providers: []gimbap.ProviderDefinition{
-		*FoodProvider,
+	Providers: []*gimbap.Provider{
+		FoodProvider,
 	},
-	Controllers: []gimbap.ControllerDefinition{
-		*FoodControllerFiberProvider,
+	Controllers: []*gimbap.Controller{
+		FoodControllerFiberProvider,
 	},
 })

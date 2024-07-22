@@ -4,10 +4,10 @@ import "github.com/jhseong7/gimbap"
 
 var FoodModuleGin = gimbap.DefineModule(gimbap.ModuleOption{
 	Name: "FoodModuleGin",
-	Providers: []gimbap.ProviderDefinition{
-		*FoodProvider,
+	Providers: []*gimbap.Provider{
+		FoodProvider,
 	},
-	Controllers: []gimbap.ControllerDefinition{
-		*FoodControllerGinProvider,
+	Controllers: []*gimbap.Controller{
+		FoodControllerGinProvider,
 	},
 })

@@ -6,10 +6,10 @@ import (
 
 var SaltModuleEcho = gimbap.DefineModule(gimbap.ModuleOption{
 	Name: "SaltModule",
-	Providers: []gimbap.ProviderDefinition{
-		*SaltProvider,
+	Providers: []*gimbap.Provider{
+		SaltProvider,
 	},
-	Controllers: []gimbap.ControllerDefinition{
-		*SaltControllerEchoProvider,
+	Controllers: []*gimbap.Controller{
+		SaltControllerEchoProvider,
 	},
 })

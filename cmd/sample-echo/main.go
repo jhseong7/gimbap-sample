@@ -2,16 +2,16 @@ package main
 
 import (
 	"github.com/jhseong7/gimbap"
-	sample "github.com/jhseong7/gimbap-sample/http-engine"
+	sample "github.com/jhseong7/gimbap-sample/server-engine"
 	"github.com/jhseong7/gimbap/engine"
 	"github.com/labstack/echo/v4"
 )
 
 func main() {
 	app := gimbap.CreateApp(gimbap.AppOption{
-		AppName:    "SampleAppEcho",
-		AppModule:  sample.AppModuleEcho,
-		HttpEngine: engine.NewEchoHttpEngine(),
+		AppName:      "SampleAppEcho",
+		AppModule:    sample.AppModuleEcho,
+		ServerEngine: engine.NewEchoHttpEngine(),
 	})
 
 	app.AddMiddleware(func(next echo.HandlerFunc) echo.HandlerFunc {

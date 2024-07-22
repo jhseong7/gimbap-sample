@@ -2,18 +2,18 @@ package food
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/jhseong7/gimbap/controller"
+	"github.com/jhseong7/gimbap"
 )
 
 type (
 	FoodControllerGin struct {
-		controller.IController
+		gimbap.IController
 		Food FoodService
 	}
 )
 
-func (c *FoodControllerGin) GetRouteSpecs() []controller.RouteSpec {
-	return []controller.RouteSpec{
+func (c *FoodControllerGin) GetRouteSpecs() []gimbap.RouteSpec {
+	return []gimbap.RouteSpec{
 		{Method: "GET", Path: "/", Handler: c.GetFood},
 		{Method: "POST", Path: "/", Handler: c.PostFood},
 	}
@@ -33,7 +33,7 @@ func NewFoodControllerGin(food *FoodService) *FoodControllerGin {
 	}
 }
 
-var FoodControllerGinProvider = controller.DefineController(controller.ControllerOption{
+var FoodControllerGinProvider = gimbap.DefineController(gimbap.ControllerOption{
 	Name:         "FoodControllerGin",
 	Instantiator: NewFoodControllerGin,
 	RootPath:     "food",
