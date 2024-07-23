@@ -9,3 +9,6 @@ run-sample-gin: ## Run sample with Gin Http Framework
 
 run-sample-fiber: ## Run sample with Fiber Http Framework
 	@go run cmd/sample-fiber/main.go
+
+run-sample-microservice: ## Run sample microservice framework
+	@go run cmd/sample-microservice/main.go

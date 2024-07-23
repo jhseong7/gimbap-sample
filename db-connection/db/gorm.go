@@ -44,7 +44,7 @@ func getSqlLiteClient(option DbClientOption) *gorm.DB {
 	db, err := gorm.Open(sqlite.Open(option.DSN), &gorm.Config{})
 
 	if err != nil {
-		panic("failed to connect database")
+		panic("failed to connect` database")
 	}
 
 	return db
