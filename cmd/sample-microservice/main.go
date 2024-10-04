@@ -8,14 +8,14 @@ import (
 	"github.com/jhseong7/gimbap"
 	ms "github.com/jhseong7/gimbap-sample/microservice-sample"
 	ss "github.com/jhseong7/gimbap-sample/server-engine"
-	"github.com/jhseong7/gimbap/engine"
+	fiber_engine "github.com/jhseong7/gimbap/engine/fiber"
 )
 
 func main() {
 	app := gimbap.CreateApp(gimbap.AppOption{
 		AppName:      "Test",
 		AppModule:    ss.AppModuleFiber,
-		ServerEngine: engine.NewFiberHttpEngine(),
+		ServerEngine: fiber_engine.NewFiberHttpEngine(),
 	})
 
 	// Add the microservice to the app

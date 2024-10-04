@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/jhseong7/gimbap"
 	sample "github.com/jhseong7/gimbap-sample/server-engine"
-	"github.com/jhseong7/gimbap/engine"
+	echo_engine "github.com/jhseong7/gimbap/engine/echo"
 	"github.com/labstack/echo/v4"
 )
 
@@ -11,7 +11,7 @@ func main() {
 	app := gimbap.CreateApp(gimbap.AppOption{
 		AppName:      "SampleAppEcho",
 		AppModule:    sample.AppModuleEcho,
-		ServerEngine: engine.NewEchoHttpEngine(),
+		ServerEngine: echo_engine.NewEchoHttpEngine(),
 	})
 
 	app.AddMiddleware(func(next echo.HandlerFunc) echo.HandlerFunc {
